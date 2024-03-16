@@ -81,11 +81,8 @@ async function seedUsers() {
             gender: "male",
             role: 'admin'
           }  
-          console.log('sciflareUser',sciflareUser);
       const newOrganization1 = await new Organization(sciflareOrg).save()
-      console.log('newOrganization1',newOrganization1);
       sciflareUser.organization = newOrganization1._id
-      console.log('sciflareUser',sciflareUser);
       const newUser = new User(sciflareUser);
         await newUser.save(); 
 
